@@ -1,0 +1,135 @@
+%=======================02-713 LaTeX template, following the 15-210 template==================
+%
+%
+%
+%
+%    1. Update the information in section "A," put your name and the name of 
+%       the class and the number of the problem set
+%    2. Write your answers in section "B" below. Precede answers for all 
+%       parts of a question with the command "\question{n}{desc}" where n is
+%       the question number and "desc" is a short, one-line description of 
+%       the problem. There is no need to restate the problem.
+%    3. If a question has multiple parts, precede the answer to part x with the
+%       command "\part{x}".
+%
+
+\documentclass[11pt]{article}
+\usepackage[mathscr]{euscript}
+
+
+\newcommand\question[2]{\vspace{.25in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
+\renewcommand\part[1]{\vspace{.10in}\textbf{(#1)}}
+
+
+% plots
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+
+\usepackage{amsmath, amssymb, amsthm} %AMS packages
+\usepackage{mathtools, graphicx, enumitem} %generally recommended
+\usepackage{mathrsfs} %symbols I like
+\usepackage{hyperref} %personal preference
+\usepackage{microtype, } %recommended by stackexchange, never tried them myself
+\usepackage{nag, todonotes} %workflow stuff, doesn't affect final document
+
+% Layout
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\lhead{\NAME}
+\chead{\ClassNumber , Assignment \ANUM}
+\rhead{Due: \duedate}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{13.6pt}
+\pagestyle{fancyplain}
+
+
+%-------------------------------------------<commands>--------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%											Letter Symbols
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathcal{F}}
+\renewcommand{\H}{\mathcal{H}} %overwrites long-umlaut diacritic
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Exp}{\mathbb{E}}
+\newcommand{\Info}{\mathcal{F}}
+\renewcommand{\P}{\mathbb{P}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%											Brackets
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\bracket}[1]{\left[ #1 \right]}
+\newcommand{\chevron}[1]{\langle #1 \rangle}
+\newcommand{\norm}[2][ ]{\left\lVert #2 \right\rVert_{#1}}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%											Operators
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\trace}{tr}
+\DeclareMathOperator{\lspan}{span}
+\DeclareMathOperator{\conv}{conv} % stands for conv, as in convex hull
+\DeclareMathOperator{\Int}{int} % stands for int, as in interior of a set
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\indep}{\perp \!\!\! \perp}
+\newcommand{\NormCDF}[1]{\Phi \left[ #1 \right]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%											Aarows
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\onto}{\twoheadrightarrow}
+\newcommand{\weakly}{\rightharpoonup}
+\newcommand{\isom}{\cong}
+\newcommand{\restr}[1]{{\upharpoonright}_{#1}}
+%\newcommand{\rest}{\big|}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%											Common Abbreviations
+\renewcommand{\th}{^\mathrm{th}} %overwrites thorn (old english letter)
+\newcommand{\n}{^{-1}}
+\newcommand{\half}{\frac{1}{2}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%											Differential Operators
+\newcommand{\del}{\partial}
+\newcommand{\grad}{\nabla}
+\newcommand{\Laplace}{\Delta}
+\renewcommand{\div}{\operatorname{div}} %overwrites division symbol
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\intd}{\,\dd}
+\newcommand{\ddt}{\frac{\dd}{\dd t}}
+\newcommand{\deriv}[2]{\frac{\dd #1}{\dd #2}} %can leave top blank, e.g. \deriv{}{x}
+\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}} %ditto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%											Favorite Functions and Space Names
+\newcommand{\test}{\mathcal{D}}
+\newcommand{\Ctest}{C_c^\infty}
+\newcommand{\BMO}{\operatorname{BMO}}
+\newcommand{\indic}[1]{\chi_{\{#1\}}}
+\newcommand{\Leb}[2][\R^n]{L^{#2}(#1)}
+%-------------------------------------------</commands>--------------------------------------------------------
+
+
+\begin{document}\raggedright
+
+
+%Section A==============Change the values below to match your information==================
+\newcommand\NAME{Ki Hyun}  % your name
+\newcommand\ClassNumber{FINM 36702}
+\newcommand\ClassName{Portfolio Credit Risk: Modeling and Estimation}    
+\newcommand\ANUM{}              % the homework number
+\newcommand\duedate{}	% due date
+%Section B==============Put your answers to the questions below here=======================
+
+\title{Assignment \ANUM}
+\author{\NAME \\ 
+\ClassNumber \text{:} \ClassName}
+\date{Due: \duedate}
+
+\maketitle
+
+%\question{1}{Description of problem}
+%\part{a}
+
+\end{document}
+
+$$
+\begin{aligned}
+\end{aligned}
+$$
