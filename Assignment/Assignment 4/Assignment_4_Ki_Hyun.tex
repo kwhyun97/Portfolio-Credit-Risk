@@ -127,6 +127,67 @@
 %\question{1}{Description of problem}
 %\part{a}
 
+\question{1}{EL, ELGD, EcLGD}
+
+\begin{itemize}
+
+\item EL:
+
+$$
+\begin{aligned}
+\Exp[Loss] &= \sum_{states} \P\{state\} 
+\times cPD_{state} \times cLGD_{state} \\
+&= 0.40 \times 0.02 \times 0.10 \\
++& 0.30 \times 0.04 \times 0.30 \\
++& 0.20 \times 0.06 \times 0.50 \\
++& 0.10 \times 0.08 \times 0.70 \\
+&= 0.016 
+\end{aligned}
+$$
+
+\item ELGD:
+
+$$
+ELGD = \frac{EL}{PD}
+$$
+
+Here,
+
+$$
+\begin{aligned}
+\P\{D\} &= \sum_{states} \P\{D \mid state \} 
+\times \P\{state\} \\
+&= 0.02 \times 0.40 +
+0.04 \times 0.30 +
+0.06 \times 0.20 \\
+&= 0.032 
+\end{aligned}
+$$
+
+Therefore,
+
+$$
+ELGD = \frac{EL}{PD}
+= \frac{0.016}{0.032}
+= 0.5
+$$
+
+\item EcLGD:
+
+$$
+\begin{aligned}
+\Exp[Loss \mid D] &= \sum_{states} \P\{state\} 
+\times cLGD_{state} \\
+&= 0.40 \times 0.10 
++ 0.30 \times 0.30 
++ 0.20 \times 0.50 
++ 0.10 \times 0.70 \\
+&= 0.30
+\end{aligned}
+$$
+
+\end{itemize}
+
 \end{document}
 
 $$
