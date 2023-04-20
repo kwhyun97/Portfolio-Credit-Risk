@@ -191,8 +191,120 @@ $$
 
 \newpage
 
-\question{2}{}
+\question{2}{"Variant A" LGD function}
 
+Given the LGD function:
+
+$$
+f_{cLGD}(cPD \mid a, PD, EL, ELGD, \rho) = 
+ELGD^a \times
+\frac{
+\Phi \left[
+\Phi^{-1}[cPD]
+- \frac{\Phi^{-1}[PD]
+- \Phi^{-1}[\frac{EL}{ELGD^a}]}
+{\sqrt{1 - \rho}}
+\right]
+}
+{cPD}
+$$
+
+Here, across various $a$, $PD$ was given as 0.05;
+$ELGD$ was given as 0.3; $\rho$ was given as 0.15.
+
+$EL$ may appear missing; however, it may be calculated 
+using the relation between $PD$ and $ELGD$ as:
+
+$$
+EL = PD \times ELGD = 0.015
+$$
+
+Plotting the function above with $cPD$ on the x-axis
+for $a \in \{-1, 0, 1, 2\}$ is shown as below:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{Q2.png}
+\caption{"Variant A" LGD functions}
+\label{Fig:Q1}
+\end{figure}
+
+
+\newpage
+
+\question{3}{Co-monotonic cPD and cLoss}
+
+Co-monotonic $cPD$ and $cLoss$ that follows the same
+distribution family means that the quantiles of the 
+two values should match precisely.
+
+Therefore, if we get the CDF values of $cPD$ from
+the $Vasicek[PD = 0.02, \rho = 0.10]$ distribution
+and plug the quantile back into the inverse-CDF function
+prescribing $cLoss$ from the $Vasicek[El = 0.01, \rho]$
+for each of the $\rho$ values, we would be able to get
+$cLoss$ values from the $cPD$ values.
+
+Then, we can create a LGD function plot using the relationship:
+
+$$
+cLGD = \frac{cLoss}{cPD}
+$$
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{Q3.png}
+\caption{Co-monotonic Vasicek cPD and cLoss}
+\label{Fig:Q1}
+\end{figure}
+
+\begin{itemize}
+
+\item (a):
+
+When $\rho = 0.05$, the $cLGD$ and $cPD$ does not resemble
+co-monotonicity. Moreover, the $cLGD$ function gets rather 
+flat as $cPD$ increases. It would be hard to find situations
+where this LGD function is useful since, generally, $cLGD$ 
+increases as default rate increases.
+
+\item (b):
+
+The $cLGD$ increases monotonically with $cPD$ values, as 
+expected from real-life cases. This LGD-function seems to
+be the most useful
+
+\newpage
+
+\item (c):
+
+The $cLGD$ increases monotonically yet more rapidly than
+in (b). Such rapid slope would be useful for extremely 
+turbulent times. However, this LGD function has a critical 
+flaw since the $cLGD$ values exceed $1.0$, which, in context, 
+is nonsensical. Therefore, overall, the LGD function would 
+not be useful.
+
+\end{itemize}
+
+
+\question{4}{ELGD, EL, PD}
+
+The relevant assumptions of Question 3(b) is:
+
+$$
+\begin{aligned}
+PD &= 0.02 \\
+EL &= 0.01
+\end{aligned}
+$$
+
+Now using the relationship between $ELGD$, $EL$, and $PD$,
+the $ELGD$ value can be computed as:
+
+$$
+ELGD = \frac{EL}{PD} = \frac{0.01}{0.02} = 0.5
+$$
 
 \end{document}
 
